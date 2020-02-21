@@ -1,0 +1,77 @@
+0. Antes de todo se descargar Selenium Server (Selenium Standalone Server) de la pagina (https://www.seleniumhq.org/download/)
+- Abrir CMD como administrador
+-- Ejecutar codigo para encender el servicio Selenium Server - java -jar selenium-server-standalone-<<version>>.jar -port(si es necesario)
+
+1. Descargar SDK - JAVA y probarlo con el comando en CMD - java
+
+------>>>>>>>  deberia salir esto 
+C:\Users\jalarcon>java
+Sintaxis: java [-options] class [args...]
+           (para ejecutar una clase)
+   o  java [-options] -jar jarfile [args...]
+           (para ejecutar un archivo jar)
+donde las opciones incluyen:
+    -d32          usar un modelo de datos de 32 bits, si está disponible
+    -d64          usar un modelo de datos de 64 bits, si está disponible
+    -client       para seleccionar la VM "client"
+    -server       para seleccionar la VM "server"
+                  La VM por defecto es client.
+
+    -cp <ruta de acceso de búsqueda de clases de los directorios y los archivos zip/jar>
+    -classpath <ruta de acceso de búsqueda de clases de los directorios y los archivos zip/jar>
+                  Lista separada por ; de directorios, archivos JAR
+                  y archivos ZIP para buscar archivos de clase.
+    -D<nombre>=<valor>
+                  definir una propiedad del sistema
+    -verbose:[class|gc|jni]
+                  activar la salida verbose
+    -version      imprimir la versión del producto y salir
+    -version:<valor>
+                  Advertencia: Esta función está en desuso y se eliminará
+                  en una versión futura.
+                  es necesario que se ejecute la versión especificada
+    -showversion  imprimir la versión del producto y continuar
+    -jre-restrict-search | -no-jre-restrict-search
+                  Advertencia: Esta función está en desuso y se eliminará
+                  en una versión futura.
+                  incluir/excluir JRE privados de usuario en la búsqueda de versión
+    -? -help      imprimir este mensaje de ayuda
+    -X            imprimir la ayuda sobre las opciones que no sean estándar
+    -ea[:<nombre paquete>...|:<nombre clase>]
+    -enableassertions[:<nombre paquete>...|:<nombre clase>]
+                  activar afirmaciones con la granularidad especificada
+    -da[:<nombre paquete>...|:<nombre clase>]
+    -disableassertions[:<nombre paquete>...|:<nombre clase>]
+                  desactivar afirmaciones con la granularidad especificada
+    -esa | -enablesystemassertions
+                  activar afirmaciones del sistema
+    -dsa | -disablesystemassertions
+                  desactivar afirmaciones del sistema
+    -agentlib:<nombre bib>[=<opciones>]
+                  cargar la biblioteca de agente nativa <nombre bib>, como -agentlib:hprof
+                  véase también -agentlib:jdwp=help y -agentlib:hprof=help
+    -agentpath:<nombre ruta acceso>[=<opciones>]
+                  cargar biblioteca de agente nativa con el nombre de la ruta de acceso completa
+    -javaagent:<ruta acceso jar>[=<opciones>]
+                  cargar agente de lenguaje de programación Java, véase java.lang.instrument
+    -splash:<ruta acceso imagen>
+                  mostrar una pantalla de presentación con la imagen especificada
+Consulte http://www.oracle.com/technetwork/java/javase/documentation/index.html para obtener más información.
+
+2. Descargar Eclipse 2018-09 preferiblemente ( http://www.eclipse.org/downloads/ )
+3. Ejecutar Ecplise.
+4. Descargar el cliente Java Selenium ( https://www.seleniumhq.org/download/) y se descomprime.
+4. Crear un nuevo proyecto JAVA.
+5. Al proyecto en el nombre click derecho y  - crear un nuevo Package 
+6. En el nuevo Packege crear una clase - 
+- packageName
+-- MyClassName
+--- No olvidar - public static void main(String[] args) checkado
+
+7. Ahora en nuevo projecto damos click derecho Properties
+8. Opcion Java Build Patch
+9. Seleccion Libraries - ADD External JARs...
+10. Se agregan las todas librerias descargadas en el paso 4 del cliente incluyendo libs, client-combined y selenium-server
+  Aply and Close
+
+Finally.
