@@ -16,5 +16,15 @@ public class ContactesOperadoresVideo7 {
 
         System.out.println(c);
 
+        //Existen mas operadores * / % + - Math etc...
+
+        //Contantes
+
+        final int d = 5;
+
+        //d = 6; //Saa mensaje de error ya que no se puede reasignar d
+
+        System.out.println(d);
+
     }
 }
