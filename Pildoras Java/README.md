@@ -2,4 +2,4 @@
 
 >> API - Java: 
 > 
->Url: docs.oracle.com/javase/7/docs/api
+>Url: https://docs.oracle.com/javase/8/docs/api/
