@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Arrays;
 
-public class CalculosMath {
+public class CalculosMathVideo8_9_10 {
 
     public static void main(String[] args) {
 
