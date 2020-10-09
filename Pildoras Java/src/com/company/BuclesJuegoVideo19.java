@@ -14,8 +14,10 @@ public class BuclesJuegoVideo19 {
 
         int numero = 0;
         int intentos = 0;
+        int contador = 0;
 
         while (numero!=aleatorio){
+            contador = contador + 1;
             System.out.println("Introduce un numero por favor");
             numero = entrada.nextInt();
 
@@ -27,7 +29,7 @@ public class BuclesJuegoVideo19 {
             }
         }
 
-        System.out.println("Correcto");
+        System.out.println("Correcto... Conseguido en " + contador + " Intentos");
 
     }
 }
