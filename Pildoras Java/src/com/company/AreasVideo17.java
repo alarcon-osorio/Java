@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Areas {
+public class AreasVideo17 {
 
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Elige una opción: \n1. Cuadrado \n2. Rectangulo \n3 Triangulo \n4. Circulo ");
         int figura = entrada.nextInt();
-        
+
         switch (figura){
             case 1:
                 int lado = Integer.parseInt(JOptionPane.showInputDialog("Introduce el lado"));
