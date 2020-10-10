@@ -27,5 +27,28 @@ public class BuclesVideo21 {
         }else{
             System.out.println("No tiene arroba");
         }
+
+        //Ejemplo 3 - metodo charAt y length
+        int arroba2 = 0;
+        boolean punto = false;
+        String mail = JOptionPane.showInputDialog("Introduce E-Mail");
+        for(int i=0; i<mail.length(); i++){
+            if (mail.charAt(i) == '@'){
+                arroba2 ++;
+            }
+        }
+
+        for(int i=0; i<mail.length(); i++){
+            if (mail.charAt(i) == '.'){
+                punto = true;
+            }
+        }
+
+        if (arroba2 == 1 && punto == true){
+            System.out.println("Tiene una arroba y tiene punto pasa todas las validaciones");
+        }else{
+            System.out.println("Tiene mas de una arroba o no tiene punto revisar");
+        }
+
     }
 }
