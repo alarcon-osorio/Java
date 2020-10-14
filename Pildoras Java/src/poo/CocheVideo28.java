@@ -2,11 +2,11 @@ package poo;
 
 public class CocheVideo28 {
 
-    int ruedas;
-    int largo;//cm
-    int ancho;//cm
-    int motor;//cm3
-    int peso;//kg - entero
+    private int ruedas;  //Con Private encapsulo esa propiedad
+    private int largo;//cm
+    private int ancho;//cm
+    private int motor;//cm3
+    private int peso;//kg - entero
 
     //Crear metodo constructor (Inicializamos objetos)
     public CocheVideo28(){
