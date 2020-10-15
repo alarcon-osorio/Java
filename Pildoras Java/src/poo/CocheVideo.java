@@ -1,6 +1,6 @@
 package poo;
 
-public class CocheVideo28_29_30_31_32 {
+public class CocheVideo {
 
     private int ruedas;//con Private encapsulo esa propiedad
     private int largo;//cm
@@ -12,7 +12,7 @@ public class CocheVideo28_29_30_31_32 {
     private boolean asientosCuero, climatizador;
 
     //Crear metodo constructor (Inicializamos objetos)
-    public CocheVideo28_29_30_31_32(){
+    public CocheVideo(){
         ruedas = 4;
         largo = 2000;
         ancho = 3000;
@@ -54,7 +54,7 @@ public class CocheVideo28_29_30_31_32 {
     //Video 31
     //Getter para el Setter de arriba
     public String obtenerAsientos() {
-        if(asientosCuero == true){
+        if(asientosCuero){  //Video 33 eliminacion de ==true ya que obvia
             return "Tiene asientos de cuero";
         }else{
             return "No tiene asientos de cuero";
@@ -75,7 +75,7 @@ public class CocheVideo28_29_30_31_32 {
     //Video32
     //Getter
     public String obtenerClimatizador(){
-        if (climatizador==true){
+        if (climatizador){ //Video 33 eliminacion de ==true ya que obvia
             return "Tiene aire acondicionado";
         }else{
             return "No tiene aire acondiconado";
@@ -87,11 +87,11 @@ public class CocheVideo28_29_30_31_32 {
         int pesoCarroceria = 500;
         pesoTotal = pesoTotal + pesoCarroceria;
 
-        if(asientosCuero==true){
+        if(asientosCuero){ //Video 33 eliminacion de ==true ya que obvia
             pesoTotal=pesoTotal + 50;
         }
 
-        if(climatizador==true){
+        if(climatizador){ //Video 33 eliminacion de ==true ya que obvia
             pesoTotal=pesoTotal + 20;
         }
 
@@ -102,10 +102,10 @@ public class CocheVideo28_29_30_31_32 {
     public int precioCoche(){
         int precioFinal = 10000;
 
-        if (asientosCuero = true){
+        if (asientosCuero){ //Video 33 eliminacion de ==true ya que obvia
             precioFinal += 2000;
         }
-        if (climatizador==true){
+        if (climatizador){ //Video 33 eliminacion de ==true ya que obvia
             precioFinal += 5000;
         }
 
