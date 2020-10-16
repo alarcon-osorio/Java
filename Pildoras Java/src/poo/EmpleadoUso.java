@@ -16,8 +16,11 @@ public class EmpleadoUso {
         empleado3.estableSueldo(5);
 
         System.out.println("Nombre = " + empleado1.obtenerNombre() + "\nSueldo: " + empleado1.obtenerSueldo() + "\nFecha de Ingreso: " + empleado1.obtenerFechaContrato());
+        System.out.println();
         System.out.println("Nombre = " + empleado2.obtenerNombre() + "\nSueldo: " + empleado2.obtenerSueldo() + "\nFecha de Ingreso: " + empleado2.obtenerFechaContrato());
+        System.out.println();
         System.out.println("Nombre = " + empleado3.obtenerNombre() + "\nSueldo: " + empleado3.obtenerSueldo() + "\nFecha de Ingreso: " + empleado3.obtenerFechaContrato());
+        System.out.println();
 
         //Video 35 Datos por medio de array de clase Empleaso
         Empleado[] misEmpleados = new Empleado[3];
@@ -34,6 +37,7 @@ public class EmpleadoUso {
             System.out.println("Nombre: " + misEmpleados[i].obtenerNombre());
             System.out.println("Sueldo: " + misEmpleados[i].obtenerSueldo());
             System.out.println("Fecha Ingreso: " + misEmpleados[i].obtenerFechaContrato());
+            System.out.println();
         }
 
         //Video 35 for mejorados
@@ -46,6 +50,7 @@ public class EmpleadoUso {
             System.out.println("Nombre: " + e.obtenerNombre());
             System.out.println("Sueldo: " + e.obtenerSueldo());
             System.out.println("Fecha Ingreso: " + e.obtenerFechaContrato());
+            System.out.println();
         }
 
     }
