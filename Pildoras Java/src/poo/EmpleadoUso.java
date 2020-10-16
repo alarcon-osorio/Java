@@ -5,7 +5,48 @@ import java.util.*;
 public class EmpleadoUso {
 
     public static void main(String[] args) {
+        //Video 35 -- Instancia de clases
+        Empleado empleado1 = new Empleado("Jeison", 6500000, 2019, 01, 01 );
+        Empleado empleado2 = new Empleado("Jose", 5000000, 2020, 01, 01 );
+        Empleado empleado3 = new Empleado("Juan", 4500000, 2018, 12, 24 );
 
+        //Video 35 -- Lamada a metodo estable sueldo
+        empleado1.estableSueldo(5);
+        empleado2.estableSueldo(5);
+        empleado3.estableSueldo(5);
+
+        System.out.println("Nombre = " + empleado1.obtenerNombre() + "\nSueldo: " + empleado1.obtenerSueldo() + "\nFecha de Ingreso: " + empleado1.obtenerFechaContrato());
+        System.out.println("Nombre = " + empleado2.obtenerNombre() + "\nSueldo: " + empleado2.obtenerSueldo() + "\nFecha de Ingreso: " + empleado2.obtenerFechaContrato());
+        System.out.println("Nombre = " + empleado3.obtenerNombre() + "\nSueldo: " + empleado3.obtenerSueldo() + "\nFecha de Ingreso: " + empleado3.obtenerFechaContrato());
+
+        //Video 35 Datos por medio de array de clase Empleaso
+        Empleado[] misEmpleados = new Empleado[3];
+
+        misEmpleados[0] = new Empleado("Jeison", 6500000, 2019, 01,01);
+        misEmpleados[1] = new Empleado("Jose", 5000000, 2020, 01,01);
+        misEmpleados[2] = new Empleado("Juan", 4500000, 2018, 12,24);
+
+        for(int i=0; i<misEmpleados.length;i++){
+            misEmpleados[i].estableSueldo(5);
+        }
+
+        for (int i=0; i<misEmpleados.length;i++){
+            System.out.println("Nombre: " + misEmpleados[i].obtenerNombre());
+            System.out.println("Sueldo: " + misEmpleados[i].obtenerSueldo());
+            System.out.println("Fecha Ingreso: " + misEmpleados[i].obtenerFechaContrato());
+        }
+
+        //Video 35 for mejorados
+        for(Empleado e: misEmpleados){
+            e.estableSueldo(5);
+        }
+
+        //Video 35 for mejorados
+        for(Empleado e: misEmpleados){
+            System.out.println("Nombre: " + e.obtenerNombre());
+            System.out.println("Sueldo: " + e.obtenerSueldo());
+            System.out.println("Fecha Ingreso: " + e.obtenerFechaContrato());
+        }
 
     }
 }
@@ -41,22 +82,9 @@ class Empleado{
     }
 
     //Video 34 - Meotodo Setter
-    public void estableNombre(){
-
-    }
-
-    //Video 34 - Meotodo Setter
     public void estableSueldo(double porcentaje){
         double aumento = billing * porcentaje/100;
         billing += aumento;
     }
-
-    //Video 34 - Meotodo Setter
-    public void estableFechaContrato(){
-
-    }
-
-
-
 
 }
