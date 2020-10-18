@@ -24,6 +24,10 @@ public class Empresa {
         System.out.println("-------Getter getData");
         //Empleados.Id++; //Video 37 aumenta en uno el uso de Id Static
         System.out.println(empleado1.getData());
+        //Video 38 - Meotodos Static
+        System.out.println("-------Getter getData - Video 38");
+        System.out.println(empleado1.getData() + "\n" + empleado2.getData() + "\n" + empleado3.getData());
+        System.out.println(Empleados.getIdSiguiente());  // Imprime 4 ya que solo hay 3 empleados
     }
 
 }
@@ -48,6 +52,11 @@ class Empleados {
         return "El nombre es: " + nombre + "\n"+
                 "la seccion es: " + seccion + "\n" +
                 "El ID es: " + IdSiguiente;
+    }
+
+    //Video 38 - Metodo Stais
+    public static String getIdSiguiente(){
+        return "El ID siguiente es: " + IdSiguiente;
     }
 
 
