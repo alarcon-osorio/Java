@@ -8,13 +8,22 @@ public class Empresa {
     public static void main(String[] args) {
         Empleados empleado1 = new Empleados("Jeison");
         Empleados empleado2 = new Empleados("Pedro");
+        Empleados empleado3 = new Empleados("Juan"); //Video 37
 
         empleado1.cambiaSeccion("RRHH");
         //empleado2.cambiaNombre("Paco"); //Agregar final delante del tipo de datos y variable
 
-        System.out.println(empleado1.getNombre() + "\n" + empleado1.getSeccion());
+        System.out.println(empleado1.getNombre() + "\n" + empleado1.getSeccion() + "\n" + "El ID Es: " + empleado1.getId());
         System.out.println("-------");
-        System.out.println(empleado2.getNombre() + "\n" + empleado2.getSeccion());
+        //Empleados.Id++; //Video 37 aumenta en uno el uso de Id Static
+        System.out.println(empleado2.getNombre() + "\n" + empleado2.getSeccion() + "\n" + "El ID Es: " + empleado2.getId());
+        //Video 37
+        System.out.println("-------");
+        //Empleados.Id++; //Video 37 aumenta en uno el uso de Id Static
+        System.out.println(empleado3.getNombre() + "\n" + empleado3.getSeccion() + "\n" + "El ID Es: " + empleado3.getId());
+        System.out.println("-------Getter getData");
+        //Empleados.Id++; //Video 37 aumenta en uno el uso de Id Static
+        System.out.println(empleado1.getData());
     }
 
 }
@@ -23,11 +32,24 @@ class Empleados {
 
     private final String nombre; //Lo convierto en constante para que no se pueda modificar mas adelante
     private String seccion;
+    //Video 37 - Uso Static
+    private int Id; //Para que sea usada por cada objeto
+    private static int IdSiguiente = 1;
 
     public Empleados(String name) {
         this.nombre = name;
         seccion = "Administracion";
+        this.Id = IdSiguiente; //Video 37
+        IdSiguiente++; //Video 37
     }
+
+    //Video 37 Retornar todos los datos Getter
+    public String getData() {
+        return "El nombre es: " + nombre + "\n"+
+                "la seccion es: " + seccion + "\n" +
+                "El ID es: " + IdSiguiente;
+    }
+
 
     //Metodo Getter y Setter autogenerados por medio del IDE
     public String getNombre() {
@@ -58,4 +80,8 @@ class Empleados {
         this.nombre = name;
     }
      */
+
+    public int getId() {
+        return Id;
+    }
 }
