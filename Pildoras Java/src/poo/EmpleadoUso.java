@@ -22,14 +22,20 @@ public class EmpleadoUso {
         System.out.println("Nombre = " + empleado3.obtenerNombre() + "\nSueldo: " + empleado3.getSueldo() + "\nFecha de Ingreso: " + empleado3.obtenerFechaContrato());
         System.out.println();
 
+        //Video 43 - Herencia III
+        Jefatura jefe1 = new Jefatura("Jeison", 6500000, 2019, 01,01);
+        jefe1.setIncentivo(1500000);
+
         //Video 35 Datos por medio de array de clase Empleaso
-        Empleado[] misEmpleados = new Empleado[4]; //Video 39 - Cambio a 4 en Array
+        Empleado[] misEmpleados = new Empleado[6]; //Video 39 - Cambio a 4 en Array //Video 43 - Cambio a 5 en array, aumento en 6 array
 
         misEmpleados[0] = new Empleado("Jeison", 6500000, 2019, 01,01);
         misEmpleados[1] = new Empleado("Jose", 5000000, 2020, 01,01);
         misEmpleados[2] = new Empleado("Juan", 4500000, 2018, 12,24);
         //Video 39 - Sobrecarga de constructores un solo parametro
         misEmpleados[3] = new Empleado("Amenadiel");
+        misEmpleados[4] = jefe1;//Video 43 - Polimorfismo, principio de sustitucion
+        misEmpleados[5] = new Jefatura("Laura", 4500000, 2018, 12,24);//Video 43 - Polimorfismo, principio de sustitucion
 
         for(int i=0; i<misEmpleados.length;i++){
             misEmpleados[i].estableSueldo(5);
