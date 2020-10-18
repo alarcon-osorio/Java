@@ -23,11 +23,13 @@ public class EmpleadoUso {
         System.out.println();
 
         //Video 35 Datos por medio de array de clase Empleaso
-        Empleado[] misEmpleados = new Empleado[3];
+        Empleado[] misEmpleados = new Empleado[4]; //Video 39 - Cambio a 4 en Array
 
         misEmpleados[0] = new Empleado("Jeison", 6500000, 2019, 01,01);
         misEmpleados[1] = new Empleado("Jose", 5000000, 2020, 01,01);
         misEmpleados[2] = new Empleado("Juan", 4500000, 2018, 12,24);
+        //Video 39 - Sobrecarga de constructores un solo parametro
+        misEmpleados[3] = new Empleado("Amenadiel");
 
         for(int i=0; i<misEmpleados.length;i++){
             misEmpleados[i].estableSueldo(5);
@@ -69,6 +71,12 @@ class Empleado{
         this.billing = billing;
         GregorianCalendar calendaro = new GregorianCalendar(year, mes -1, dia); //Video 33 - Enero es 1 - 1 = 0 para controlarlo
         altaContrato =  calendaro.getTime(); //Video 33 - Intro Herencia
+    }
+
+    //Video 39 - SobreCarga de constructores
+    public Empleado(String name) {
+        //this.name = name;
+        this(name, 3000000, 2000,01,01); //Llama al otro constructor si queremos enviar otros paraetros diferentes
     }
 
     //Video 34 - Metodo Getter
