@@ -1,6 +1,6 @@
 package poo;
 
-public class CocheVideo {
+public class Coche {
 
     private int ruedas;//con Private encapsulo esa propiedad
     private int largo;//cm
@@ -12,7 +12,7 @@ public class CocheVideo {
     private boolean asientosCuero, climatizador;
 
     //Crear metodo constructor (Inicializamos objetos)
-    public CocheVideo(){
+    public Coche(){
         ruedas = 4;
         largo = 2000;
         ancho = 3000;

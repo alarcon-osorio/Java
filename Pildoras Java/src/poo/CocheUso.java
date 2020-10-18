@@ -2,11 +2,11 @@ package poo;
 
 import javax.swing.*;
 
-public class CocheUsoVideo {
+public class CocheUso {
 
     public static void main(String[] args) {
         //Instanciamos la clase
-        CocheVideo Renault = new CocheVideo(); //Ejemplar de Clase Video 30
+        Coche Renault = new Coche(); //Ejemplar de Clase Video 30
         //Renault.ruedas = 3; // No modificar desde aqui esas propiedades, con esto se aplica encapsulacion(anota error ruedas)
         //Metodos Getters y Setters Video 30
         System.out.println(Renault.obtenerDatos());
