@@ -11,4 +11,9 @@ public class Furgoneta extends Coche{
         this.capacidadCarga = capacidadCarga;
     }
 
+    //Video 41 - Metodo Getter
+    public String getData(){
+        return "La capacidad de carga es: " + capacidadCarga + " y las plazas son: " + plazasExtra;
+    }
+
 }
