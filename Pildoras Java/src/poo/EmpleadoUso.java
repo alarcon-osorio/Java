@@ -15,11 +15,11 @@ public class EmpleadoUso {
         empleado2.estableSueldo(5);
         empleado3.estableSueldo(5);
 
-        System.out.println("Nombre = " + empleado1.obtenerNombre() + "\nSueldo: " + empleado1.obtenerSueldo() + "\nFecha de Ingreso: " + empleado1.obtenerFechaContrato());
+        System.out.println("Nombre = " + empleado1.obtenerNombre() + "\nSueldo: " + empleado1.getSueldo() + "\nFecha de Ingreso: " + empleado1.obtenerFechaContrato());
         System.out.println();
-        System.out.println("Nombre = " + empleado2.obtenerNombre() + "\nSueldo: " + empleado2.obtenerSueldo() + "\nFecha de Ingreso: " + empleado2.obtenerFechaContrato());
+        System.out.println("Nombre = " + empleado2.obtenerNombre() + "\nSueldo: " + empleado2.getSueldo() + "\nFecha de Ingreso: " + empleado2.obtenerFechaContrato());
         System.out.println();
-        System.out.println("Nombre = " + empleado3.obtenerNombre() + "\nSueldo: " + empleado3.obtenerSueldo() + "\nFecha de Ingreso: " + empleado3.obtenerFechaContrato());
+        System.out.println("Nombre = " + empleado3.obtenerNombre() + "\nSueldo: " + empleado3.getSueldo() + "\nFecha de Ingreso: " + empleado3.obtenerFechaContrato());
         System.out.println();
 
         //Video 35 Datos por medio de array de clase Empleaso
@@ -37,7 +37,7 @@ public class EmpleadoUso {
 
         for (int i=0; i<misEmpleados.length;i++){
             System.out.println("Nombre: " + misEmpleados[i].obtenerNombre());
-            System.out.println("Sueldo: " + misEmpleados[i].obtenerSueldo());
+            System.out.println("Sueldo: " + misEmpleados[i].getSueldo());
             System.out.println("Fecha Ingreso: " + misEmpleados[i].obtenerFechaContrato());
             System.out.println();
         }
@@ -50,7 +50,7 @@ public class EmpleadoUso {
         //Video 35 for mejorados
         for(Empleado e: misEmpleados){
             System.out.println("Nombre: " + e.obtenerNombre());
-            System.out.println("Sueldo: " + e.obtenerSueldo());
+            System.out.println("Sueldo: " + e.getSueldo());
             System.out.println("Fecha Ingreso: " + e.obtenerFechaContrato());
             System.out.println();
         }
@@ -85,7 +85,7 @@ class Empleado{
     }
 
     //Video 34 - Metodo Getter
-    public double obtenerSueldo(){
+    public double getSueldo(){
         return billing;
     }
 
@@ -100,4 +100,26 @@ class Empleado{
         billing += aumento;
     }
 
+}
+
+//Video 42 - Herencia III
+class Jefatura extends Empleado{
+    private double incentivo;
+
+    //Crear constructor
+    public Jefatura(String name, double billing, int year, int mes, int dia){
+        //Super() con parametros
+        super(name, billing, year, mes, dia);
+    }
+
+    //Setter
+    public void setIncentivo(double incentivo){
+        this.incentivo = incentivo;
+    }
+
+    //Sobreescribe el Metodo getSueldo
+    public double getSueldo(){
+        double sueldoJefe = super.getSueldo(); //Con super le decimos que llame el metodo de la clase padre
+        return sueldoJefe + incentivo;
+    }
 }
