@@ -40,6 +40,7 @@ public class EmpleadoUso {
         Jefatura jefe2 = (Jefatura) misEmpleados[5];
         jefe2.setIncentivo(200000);
 
+        System.out.println(jefe2.tomarDecisiones("Dar mas dias de vacaciones a los empleados"));
 
         for(int i=0; i<misEmpleados.length;i++){
             misEmpleados[i].estableSueldo(5);
@@ -52,12 +53,26 @@ public class EmpleadoUso {
             System.out.println();
         }
 
+        /*************************************** Ejemplo InstanceOf
+        //Video 50 - Interfaces II - Sustitucion e IntaceOf
+        Empleado directoComercial = new Jefatura("Sandra", 1500000,2012,05,05);
+        Comparable ejemplo = new Empleado("Eliza", 950000,2011,06,07);
+
+        if (directoComercial instanceof Empleado){
+            System.out.println("Es de tipo Jefatura");
+        }
+
+        if (ejemplo instanceof Comparable){
+            System.out.println("Es de interfaz Comparable ");
+        }
+        *******************************************/
+
         //Video 35 for mejorados
         for(Empleado e: misEmpleados){
             e.estableSueldo(5);
         }
 
-        Arrays.sort(misEmpleados); //Video 49 - Interfaces
+        Arrays.sort(misEmpleados); //Video 49 - Interfaces -- Sort ordena
 
         //Video 35 for mejorados
         for(Empleado e: misEmpleados){
@@ -113,7 +128,7 @@ class Empleado implements Comparable{  //Video 49 - Interfaces  //Constuir metod
     }
 
     // Video 49 - interfaces  - CompareTo  -- Con esto se sobreescribe ese metodo
-    public int CompareTo(Object miObject){
+    public int compareTo(Object miObject){
         Empleado otroEmpleado = (Empleado) miObject; //Casteo de Objeto
         if (this.billing<otroEmpleado.billing){
             return -1;
@@ -128,13 +143,18 @@ class Empleado implements Comparable{  //Video 49 - Interfaces  //Constuir metod
 }
 
 //Video 42 - Herencia III
-class Jefatura extends Empleado{
+class Jefatura extends Empleado implements Jefes{ // Video 50 - Interfaces II --- Se debe implemetar el metodo
     private double incentivo;
 
     //Crear constructor
     public Jefatura(String name, double billing, int year, int mes, int dia){
         //Super() con parametros
         super(name, billing, year, mes, dia);
+    }
+
+    //Video 50 - Interfaces II ----Metodo implementado
+    public String tomarDecisiones(String decision){
+        return "";
     }
 
     //Setter
