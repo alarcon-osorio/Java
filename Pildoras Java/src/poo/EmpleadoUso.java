@@ -42,6 +42,10 @@ public class EmpleadoUso {
 
         System.out.println(jefe2.tomarDecisiones("Dar mas dias de vacaciones a los empleados"));
 
+        System.out.println("Jefe = " + jefe2.obtenerNombre() + " Tiene bonus de " + jefe2.setBonus(500000));
+
+        System.out.println(misEmpleados[3].obtenerNombre() +  " tiene un bonus de " + misEmpleados[3].setBonus(200));
+
         for(int i=0; i<misEmpleados.length;i++){
             misEmpleados[i].estableSueldo(5);
         }
@@ -86,7 +90,7 @@ public class EmpleadoUso {
 }
 
 //Video 33 -- solo una clase debe ser publica y solo una debe ser main
-class Empleado implements Comparable{  //Video 49 - Interfaces  //Constuir metodo CompareTo
+class Empleado implements Comparable, Trabajadores{  //Video 49 - Interfaces  //Constuir metodo CompareTo
     private String name; // Tipos de objetos
     private double billing;  // Tipos primitivos
     private Date altaContrato; // Tipos de objetos
@@ -140,6 +144,12 @@ class Empleado implements Comparable{  //Video 49 - Interfaces  //Constuir metod
         return 0;
     }
 
+    //Video 51 - Interfaces III
+    @Override
+    public double setBonus(double gratificacion) {
+        return Trabajadores.bonusBase + gratificacion;
+    }
+
 }
 
 //Video 42 - Herencia III
@@ -166,6 +176,12 @@ class Jefatura extends Empleado implements Jefes{ // Video 50 - Interfaces II --
     public double getSueldo(){
         double sueldoJefe = super.getSueldo(); //Con super le decimos que llame el metodo de la clase padre
         return sueldoJefe + incentivo;
+    }
+
+    //Video 51 - Interfaces III -- Implemento interface
+    public double setBonus(double gratificacion){
+        double prima = 2000;
+        return Trabajadores.bonusBase + gratificacion + prima;
     }
 }
 
