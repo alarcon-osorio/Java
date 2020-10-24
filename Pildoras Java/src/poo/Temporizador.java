@@ -1,6 +1,7 @@
 package poo;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.Arrays;
 import java.util.Date;
@@ -19,7 +20,11 @@ public class Temporizador {
 
 class GetHour implements ActionListener{
     public void actionPerformed(ActionEvent e){
+        int contador = 1;
         Date date = new Date(); //Solo importar la clase, se almacena la hora y fecha actual
-        System.out.println("La hora cada 1 segundos " + date);
+        System.out.println("La hora cada " +  contador  + " segundos " + date);
+        //Video 53 - Clases Internas I
+        Toolkit.getDefaultToolkit().beep();  //Video 53 - Clases Internas I --- Hace el sonido defecto de Windows
     }
+
 }
