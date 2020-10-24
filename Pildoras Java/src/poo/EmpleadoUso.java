@@ -57,6 +57,8 @@ public class EmpleadoUso {
             e.estableSueldo(5);
         }
 
+        Arrays.sort(misEmpleados); //Video 49 - Interfaces
+
         //Video 35 for mejorados
         for(Empleado e: misEmpleados){
             System.out.println("Nombre: " + e.obtenerNombre());
@@ -69,7 +71,7 @@ public class EmpleadoUso {
 }
 
 //Video 33 -- solo una clase debe ser publica y solo una debe ser main
-class Empleado{
+class Empleado implements Comparable{  //Video 49 - Interfaces  //Constuir metodo CompareTo
     private String name; // Tipos de objetos
     private double billing;  // Tipos primitivos
     private Date altaContrato; // Tipos de objetos
@@ -108,6 +110,19 @@ class Empleado{
     public void estableSueldo(double porcentaje){
         double aumento = billing * porcentaje/100;
         billing += aumento;
+    }
+
+    // Video 49 - interfaces  - CompareTo  -- Con esto se sobreescribe ese metodo
+    public int CompareTo(Object miObject){
+        Empleado otroEmpleado = (Empleado) miObject; //Casteo de Objeto
+        if (this.billing<otroEmpleado.billing){
+            return -1;
+        }
+        if (this.billing>otroEmpleado.billing){
+            return 1;
+        }
+
+        return 0;
     }
 
 }
