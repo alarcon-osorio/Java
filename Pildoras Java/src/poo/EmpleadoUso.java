@@ -36,6 +36,10 @@ public class EmpleadoUso {
         misEmpleados[3] = new Empleado("Amenadiel");
         misEmpleados[4] = jefe1;//Video 43 - Polimorfismo, principio de sustitucion
         misEmpleados[5] = new Jefatura("Laura", 4500000, 2018, 12,24);//Video 43 - Polimorfismo, principio de sustitucion
+        //Video 44 Castea el tipo de objeto
+        Jefatura jefe2 = (Jefatura) misEmpleados[5];
+        jefe2.setIncentivo(200000);
+
 
         for(int i=0; i<misEmpleados.length;i++){
             misEmpleados[i].estableSueldo(5);
@@ -129,3 +133,5 @@ class Jefatura extends Empleado{
         return sueldoJefe + incentivo;
     }
 }
+
+
