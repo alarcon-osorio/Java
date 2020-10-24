@@ -134,6 +134,4 @@ class Jefatura extends Empleado{
     }
 }
 
-//Video 45 - Teoria Abstract I
-
 
