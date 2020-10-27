@@ -6,9 +6,10 @@ import java.awt.*;
 // Video 55 - Swing I -- Aplicaciones graficas con swing
 public class Frames {
     public static void main(String[] args) {
-        /*myFrame frame1 = new myFrame();
-        frame1.setVisible(true);
-        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
+        /*myFrame frame1 = new myFrame(); //-- Video 57
+        frame1.setVisible(true); //-- Video 57
+        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //-- Video 57 */
+        //Video 57 - Swing III - Aplicaciones graficas con swing
         FrameCenter frame = new FrameCenter();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
@@ -28,6 +29,7 @@ class myFrame extends JFrame{
     }
 }
 
+//Video 57 - Swing III - Aplicaciones graficas con swing
 class FrameCenter extends JFrame{
     public FrameCenter(){
         Toolkit pantalla = Toolkit.getDefaultToolkit();
@@ -40,5 +42,4 @@ class FrameCenter extends JFrame{
         Image icono = pantalla.getImage("ruta/imagen");
         setIconImage(icono);
     }
-
 }
