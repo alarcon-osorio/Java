@@ -3,8 +3,7 @@ package graficos;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 //Video 61 - Swing VII Manejando colores
 public class Colores {
@@ -22,6 +21,8 @@ class MarcoConColor extends JFrame{
         setSize(400,400);
         LaminaConColor milamina =  new LaminaConColor();
         add(milamina);
+        //Video 61 - Background
+        milamina.setBackground(Color.yellow);
     }
 }
 
