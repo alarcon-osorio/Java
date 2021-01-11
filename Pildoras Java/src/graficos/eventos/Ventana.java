@@ -2,6 +2,7 @@
 package graficos.eventos;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -24,14 +25,16 @@ class MarcoVentana extends JFrame {  //Video 68 - Preparala para el oyente
         //setTitle("Ventana");
         //setBounds(300,300,500,350);
         setVisible(true);
-        MiVentana oyenteVentana = new MiVentana();
-        addWindowListener(oyenteVentana);
+        //MiVentana oyenteVentana = new MiVentana();
+        //addWindowListener(oyenteVentana);
+        addWindowListener(new MiVentana()); //Video 69 - Reduce codigo instanciando el objeto total
     }
 }
 
-class MiVentana implements WindowListener{ //Video 68 - Implementar los metodos de interface
-
-    @Override
+//class MiVentana implements WindowListener{ //Video 68 - Implementar los metodos de interface
+    //Video 69 - No implementar todos estos metodos - Clase adaptadora
+class MiVentana extends WindowAdapter { //Video 69 - WindowAdapter
+    /*@Override
     public void windowOpened(WindowEvent e) {
         System.out.println("Ventana Abierta");
     }
@@ -45,12 +48,12 @@ class MiVentana implements WindowListener{ //Video 68 - Implementar los metodos 
     public void windowClosed(WindowEvent e) { //Video 68 - No se puede ver el comportamiento de este metodo
         System.out.println("Ventana 2 Cerrada"); //Video 68 - mimarco2
     }
-
+    */
     @Override
     public void windowIconified(WindowEvent e) {
         System.out.println("Ventana minimizada");
     }
-
+/*
     @Override
     public void windowDeiconified(WindowEvent e) {
         System.out.println("Ventana restaurada");
@@ -65,4 +68,6 @@ class MiVentana implements WindowListener{ //Video 68 - Implementar los metodos 
     public void windowDeactivated(WindowEvent e) {
 
     }
+    */
+
 }
