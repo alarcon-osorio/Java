@@ -21,7 +21,7 @@ class MarcoConBotones extends JFrame{
     }
 }
 
-class LaminaBotones extends JPanel implements ActionListener { //Video 66 - Se debe reescribir el metodo ActionPerformed
+class LaminaBotones extends JPanel  { //Video 66 - Se debe reescribir el metodo ActionPerformed //Video 67 - Quito implements
     JButton botonAzul = new JButton("Azul");
     JButton botonAmarillo = new JButton("Amarillo");
     JButton botonRojo = new JButton("Rojo");
@@ -30,22 +30,27 @@ class LaminaBotones extends JPanel implements ActionListener { //Video 66 - Se d
         add(botonAmarillo);
         add(botonRojo);
 
-        botonAzul.addActionListener(this); //Action = Hacer Click, Listener= Oyente, this= Objeto que recibe el evento
-        botonAmarillo.addActionListener(this);
-        botonRojo.addActionListener(this);
+        ColorFondo Azul = new ColorFondo(Color.blue);
+        ColorFondo Amarillo = new ColorFondo(Color.yellow);
+        ColorFondo Rojo = new ColorFondo(Color.red);
+
+        botonAzul.addActionListener(Azul); //Action = Hacer Click, Listener= Oyente, this= Objeto que recibe el evento
+        botonAmarillo.addActionListener(Amarillo);
+        botonRojo.addActionListener(Rojo);
 
     }
 
-    public void actionPerformed(ActionEvent e){ //Pertenece a la interface ActionListener
-        Object botonPulsado = e.getSource();
-        if(botonPulsado == botonAzul){
-            setBackground(Color.blue);
-        }else if(botonPulsado == botonAmarillo){
-            setBackground(Color.yellow);
-        }else if(botonPulsado == botonRojo){
-            setBackground(Color.red);
+    //Video 67 - Forma 2 Clase internas
+    private class ColorFondo implements ActionListener{ //Debe tener el metodo ActionPerformed
+        private Color colorDeFondo;
+        public ColorFondo(Color c){
+            colorDeFondo = c;
         }
 
+        public void actionPerformed(ActionEvent e){
+            setBackground(colorDeFondo); //Pertenece a la clase Jpanel - Se soluciona poniendola interna
+        }
     }
 
 }
+
